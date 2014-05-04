@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-4-16 16:35:00 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="entity.Videotype" table="videotype" catalog="vehicle">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="typeName" type="string">
+            <column name="type_name" not-null="true" />
+        </property>
+        <property name="viewMode" type="long">
+            <column name="view_mode" not-null="true" />
+        </property>
+        <property name="fileNum" type="long">
+            <column name="file_num" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

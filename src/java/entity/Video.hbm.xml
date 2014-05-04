@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-4-16 16:35:00 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="entity.Video" table="video" catalog="vehicle">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="type" type="string">
+            <column name="type" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="duration" type="string">
+            <column name="duration" not-null="true" />
+        </property>
+        <property name="clicks" type="long">
+            <column name="clicks" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="actor" type="string">
+            <column name="actor" />
+        </property>
+        <property name="priase" type="long">
+            <column name="priase" not-null="true" />
+        </property>
+        <property name="isfile" type="long">
+            <column name="isfile" not-null="true" />
+        </property>
+        <property name="scaleX" type="long">
+            <column name="scale_x" not-null="true" />
+        </property>
+        <property name="scaleY" type="long">
+            <column name="scale_y" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

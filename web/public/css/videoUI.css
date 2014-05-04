@@ -1,0 +1,72 @@
+.ui-icon-goodjob:after {
+	background-image: url("images/myicon/svg/goodjob.svg");
+}
+/* Fallback */
+.ui-nosvg .ui-icon-goodjob:after {
+	background-image: url("images/myicon/png/goodjob.png");
+}
+
+#popIcon{
+    float:right;
+    width: 40px;
+    height: 40px;
+    display:block;
+    overflow:hidden;
+    margin-right: 5px; 
+    text-indent:-9999px;
+    background: url("../css/images/goodjob.png")0 0 no-repeat;
+}
+#priaseNum{
+    float:right; 
+    display:block; 
+    color:#5599ff; 
+    overflow:hidden; 
+    text-indent:-9999px;
+    width: 40px; 
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#timer{
+    position: absolute; 
+    font-size: 11px; 
+    font-weight: bold; 
+    margin-top: -.95em; 
+    z-index: 1;
+    padding: .2em .5em; top: 5%; 
+    right: 10px; 
+    -webkit-border-radius: 0em; 
+    border-radius: 0em; 
+    border: 0px solid #ccc; 
+    color: red; 
+    font-size: 14px; 
+    font-family: Arial;
+    
+}
+
+
+.clickNumbers{
+    position: absolute; 
+    font-size: 11px; 
+    font-weight: bold; 
+    margin-top: 1.5em; 
+    padding: .2em .5em; 
+    top: 15%; 
+    right: 10px; 
+    -webkit-border-radius: 1em; 
+    border-radius: 1em; 
+    border: 1px solid #ccc;
+}
+
+.clickNumbersSimple{
+    position: absolute; 
+    font-size: 11px; 
+    font-weight: bold; 
+    margin-top: 1em; 
+    padding: .2em .5em; 
+    top: 15%; 
+    right: 10px; 
+    -webkit-border-radius: 1em; 
+    border-radius: 1em; 
+    border: 1px solid #ccc;
+}

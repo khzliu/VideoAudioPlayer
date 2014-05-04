@@ -1,0 +1,441 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.jplayer.org
+ *
+ * Skin Name: Blue Monday
+ *
+ * Copyright (c) 2010-2012 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 4.3 (jPlayer 2.2.0)
+ * Date: 19th November 2012
+ */
+
+div.jp-audio,
+div.jp-audio-stream,
+div.jp-video {
+
+	/* Edit the font-size to counteract inherited font sizing.
+	 * Eg. 1.25em = 1 / 0.8em
+	 */
+
+	font-size:1.25em; /* 1.25em for testing in site pages */ /* No parent CSS that can effect the size in the demos ZIP */
+
+	font-family:Verdana, Arial, sans-serif;
+	line-height:1.6;
+	color: #666;
+	border:1px solid #009be3;
+	background-color:#eee;
+}
+div.jp-audio {
+    width:100%;
+}
+div.jp-audio-stream {
+	width:182px;
+}
+
+
+div.jp-interface {
+	position: relative;
+	background-color:#555;
+	width:100%;
+}
+
+div.jp-audio div.jp-type-single div.jp-interface {
+	height:45px;  /* 调整控制栏宽度*/
+}
+div.jp-audio div.jp-type-single {
+        background-color:#555;
+}
+div.jp-audio div.jp-type-playlist div.jp-interface {
+	height:80px;
+}
+
+div.jp-audio-stream div.jp-type-single div.jp-interface {
+	height:80px;
+}
+
+
+/* @group CONTROLS */
+
+div.jp-controls-holder {
+	clear: both;
+	width:440px;
+	margin:0 auto;
+	position: relative;
+	overflow:hidden;
+	top:-8px; /* This negative value depends on the size of the text in jp-currentTime and jp-duration */
+}
+
+div.jp-interface ul.jp-controls {
+	list-style-type:none;
+	margin:0;
+	padding: 0;
+	overflow: hidden;
+}
+
+div.jp-audio ul.jp-controls {
+	width: 380px;
+	padding:0 20px 0 20px; /* 调整控制栏宽度*/
+}
+
+div.jp-audio-stream ul.jp-controls {
+	width: 142px;
+	padding:20px 20px 0 20px;
+}
+ul.jp-controls li {
+	float: left; 
+	width: 40px;
+}
+
+div.jp-interface ul.jp-controls a {
+	display:block;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+a.jp-play,
+a.jp-pause {
+	margin-top: 0px;
+	width:40px;
+	height:40px;
+}
+#popIcon{
+    float:right;
+    width: 40px;
+    height: 40px;
+    display:block;
+    overflow:hidden;
+    margin-right: 5px; 
+    margin-top: -40px;
+    text-indent:-9999px;
+    background: url("../css/images/goodjob.png")0 0 no-repeat;
+}
+#priaseNum{
+    float:right; 
+    display:block; 
+    color:#5599ff; 
+    overflow:hidden; 
+    text-indent:-9999px;
+    width: 40px; 
+    margin-right: 50px;
+    margin-top: -35px;
+}
+a.jp-play {
+	background: url("../css/images/play_40.png") 0 0 no-repeat;
+}
+a.jp-pause {
+	background: url("../css/images/pause_40.png") 0 0 no-repeat;
+	display: none;
+}
+/*a.jp-play:hover {
+	background: url("../css/images/play.png") -41px 0 no-repeat;
+}
+
+a.jp-pause:hover {
+	background: url("../css/images/pause.png") -41px 0 no-repeat;
+}
+*/
+a.jp-stop{
+	width:28px;
+	height:28px;
+	margin-top:6px;
+}
+
+a.jp-stop {
+	background: url("../images/stop.png") 0 0 no-repeat;
+	margin-left:10px;
+}
+
+a.jp-stop:hover {
+	background: url("../images/stop.png") -29px 0 no-repeat;
+}
+
+a.jp-previous {
+	background: url("../images/jplayer.blue.monday.jpg") 0 -112px no-repeat;
+}
+a.jp-previous:hover {
+	background: url("../images/jplayer.blue.monday.jpg") -29px -112px no-repeat;
+}
+
+a.jp-next {
+	background: url("../images/jplayer.blue.monday.jpg") 0 -141px no-repeat;
+}
+a.jp-next:hover {
+	background: url("../images/jplayer.blue.monday.jpg") -29px -141px no-repeat;
+}
+
+/* @end */
+
+/* @group progress bar */
+
+div.jp-progress {
+	overflow:hidden;
+	background-color: #ddd;
+}
+div.jp-audio div.jp-progress {
+	position: absolute;
+	top:5px;   /* 调整控制栏宽度*/
+	height:15px;
+}
+div.jp-audio div.jp-type-single div.jp-progress {
+	left:80px; /*使进度条靠左移动 modified by khzliu 2014-2-17 10:21:04 */
+	width:186px;
+}
+div.jp-audio div.jp-type-playlist div.jp-progress {
+	left:166px;
+	width:130px;
+}
+
+div.jp-seek-bar {
+	background: url("../images/jplayer.blue.monday.jpg") 0 -202px repeat-x;
+	width:0px;
+	height:100%;
+	cursor: pointer;
+}
+div.jp-play-bar {
+	background: url("../images/jplayer.blue.monday.jpg") 0 -218px repeat-x ;
+	width:0px;
+	height:100%;
+}
+
+/* The seeking class is added/removed inside jPlayer */
+div.jp-seeking-bg {
+	background: url("../images/jplayer.blue.monday.seeking.gif");
+}
+
+/* @end */
+
+/* @group volume controls */
+
+
+
+/* @end */
+
+/* @group current time and duration */
+
+div.jp-audio div.jp-time-holder {
+	position:absolute;
+	top:20px; /* 调整控制栏宽度*/
+}
+div.jp-audio div.jp-type-single div.jp-time-holder {
+	left:80px; /*使时间靠左移动 modified by khzliu 2014-2-17 10:21:04 */
+	width:186px;
+}
+div.jp-audio div.jp-type-playlist div.jp-time-holder {
+	left:166px;
+	width:130px;
+}
+
+div.jp-current-time,
+div.jp-duration {
+	width:60px;
+	font-size:.64em;
+	font-style:oblique;
+        color: wheat;
+}
+div.jp-current-time {
+	float: left;
+	display:inline;
+}
+div.jp-duration {
+	float: right;
+	display:inline;
+	text-align: right;
+}
+
+
+
+/* @end */
+
+/* @group playlist */
+
+div.jp-title {
+	font-weight:bold;
+	text-align:center;
+}
+
+div.jp-title {
+	width:100%;
+	background-color:#ccc;
+	border-top:1px solid #009be3;
+}
+div.jp-type-single div.jp-title,
+div.jp-type-playlist div.jp-title,
+div.jp-type-single div.jp-playlist {
+	border-top:none;
+}
+div.jp-title ul {
+	list-style-type:none;
+	margin:0;
+	padding:0 10px;
+	font-size:1.20em;
+}
+
+div.jp-title li {
+	padding:2px 0;
+	font-weight:bold;
+        color:#5599ff;
+}
+
+
+span.jp-artist {
+	font-size:.8em;
+	color:#111;
+}
+
+/* @end */
+
+
+div.jp-jplayer {
+	background-color: #000000;
+}
+
+
+
+
+
+/* @group TOGGLES */
+
+/* The audio toggles are nested inside jp-time-holder */
+
+ul.jp-toggles {
+	list-style-type:none;
+	padding:0;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+div.jp-audio .jp-type-single ul.jp-toggles {
+	width:25px;
+}
+div.jp-audio .jp-type-playlist ul.jp-toggles {
+	width:55px;
+	margin: 0;
+	position: absolute;
+	left: 325px;
+	top: 50px;
+}
+
+
+ul.jp-toggles li {
+	display:block;
+	float:right;
+}
+
+ul.jp-toggles li a {
+	display:block;
+	width:25px;
+	height:18px;
+	text-indent:-9999px;
+	line-height:100%; /* need this for IE6 */
+}
+
+a.jp-full-screen {
+	background: url("../images/jplayer.blue.monday.jpg") 0 -310px no-repeat;
+	margin-left: 20px;
+}
+
+a.jp-full-screen:hover {
+	background: url("../images/jplayer.blue.monday.jpg") -30px -310px no-repeat;
+}
+
+a.jp-restore-screen {
+	background: url("../images/jplayer.blue.monday.jpg") -60px -310px no-repeat;
+	margin-left: 20px;
+}
+
+a.jp-restore-screen:hover {
+	background: url("../images/jplayer.blue.monday.jpg") -90px -310px no-repeat;
+}
+
+a.jp-repeat {
+	background: url("../images/jplayer.blue.monday.jpg") 0 -290px no-repeat;
+}
+
+a.jp-repeat:hover {
+	background: url("../images/jplayer.blue.monday.jpg") -30px -290px no-repeat;
+}
+
+a.jp-repeat-off {
+	background: url("../images/jplayer.blue.monday.jpg") -60px -290px no-repeat;
+}
+
+a.jp-repeat-off:hover {
+	background: url("../images/jplayer.blue.monday.jpg") -90px -290px no-repeat;
+}
+
+a.jp-shuffle {
+	background: url("../images/jplayer.blue.monday.jpg") 0 -270px no-repeat;
+	margin-left: 5px;
+}
+
+a.jp-shuffle:hover {
+	background: url("../images/jplayer.blue.monday.jpg") -30px -270px no-repeat;
+}
+
+a.jp-shuffle-off {
+	background: url("../images/jplayer.blue.monday.jpg") -60px -270px no-repeat;
+	margin-left: 5px;
+}
+
+a.jp-shuffle-off:hover {
+	background: url("../images/jplayer.blue.monday.jpg") -90px -270px no-repeat;
+}
+
+
+/* @end */
+
+/* @group NO SOLUTION error feedback */
+
+.jp-no-solution {
+	padding:5px;
+	font-size:.8em;
+	background-color:#eee;
+	border:2px solid #009be3;
+	color:#000;
+	display:none;
+}
+
+.jp-no-solution a {
+	color:#000;
+}
+
+.jp-no-solution span {
+	font-size:1em;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+}
+/* git test */
+/* @end */
+
+
+
+.clickNumbers{
+    position: absolute; 
+    font-size: 11px; 
+    font-weight: bold; 
+    margin-top: 1.5em; 
+    padding: .2em .5em; 
+    top: 15%; 
+    right: 10px; 
+    -webkit-border-radius: 1em; 
+    border-radius: 1em; 
+    border: 1px solid #ccc;
+}
+
+.clickNumbersSimple{
+    position: absolute; 
+    font-size: 11px; 
+    font-weight: bold; 
+    margin-top: 1em; 
+    padding: .2em .5em; 
+    top: 15%; 
+    right: 10px; 
+    -webkit-border-radius: 1em; 
+    border-radius: 1em; 
+    border: 1px solid #ccc;
+}
